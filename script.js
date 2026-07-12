@@ -1,6 +1,3 @@
-const ROWS = 16;
-const COLS = 16;
-
 const COLORS = ["blue", "black", "yellow", "pink", "purple", "grey", "brown", "red", "green", "white"];
 
 function getRandomColor() {
@@ -14,14 +11,14 @@ function addHoverEffect(cell) {
     });
 }
 
-function createGrid() {
+function createGrid(size) {
     const grid = document.querySelector(".grid");
     
-    for(let r = 0; r < ROWS; r++) {
+    for(let r = 0; r < size; r++) {
         const row = document.createElement("div");
         row.className = "row";
         
-        for(let c = 0; c < COLS; c++) {
+        for(let c = 0; c < size; c++) {
             const cell = document.createElement("div");
             cell.className = "row-cell";      
             row.appendChild(cell);
@@ -33,4 +30,4 @@ function createGrid() {
     }
 }
 
-createGrid();
+createGrid(16);

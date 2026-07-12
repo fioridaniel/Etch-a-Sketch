@@ -2,22 +2,27 @@
     box-sizing: border-box;
 }
 
-.grid {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+}
+
+.grid {
+    display: flex;
     flex-direction: column;
-    gap: 5px;
+    width: 960px;
+    height: 960px;
 }
 
 .row {
     display: flex;
-    gap: 5px;
+    flex: 1;
 }
 
 .row-cell {
     background-color: white;
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
+    flex: 1;
+    border: 1px solid black;
 }
