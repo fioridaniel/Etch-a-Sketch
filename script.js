@@ -1,9 +1,16 @@
 const ROWS = 16;
 const COLS = 16;
 
+const COLORS = ["blue", "black", "yellow", "pink", "purple", "grey", "brown", "red", "green", "white"];
+
+function getRandomColor() {
+    const index = Math.floor(Math.random() * COLORS.length);
+    return COLORS[index];
+}
+
 function addHoverEffect(cell) {
     cell.addEventListener("mouseenter", (event) => {
-        event.target.style.backgroundColor = "black";
+        event.target.style.backgroundColor = getRandomColor();
     });
 }
 
